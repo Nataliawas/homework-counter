@@ -1,0 +1,77 @@
+#plusOne, #minusOne {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; 
+    bottom: 30px; 
+}
+#plusOne.show, #minusOne.show  {
+    visibility: visible; 
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+button:hover {
+    box-shadow:0 8px 16px 0 #B33771 ,0 6px 20px 0 #B33771;
+    cursor: pointer;
+}
+
+
+.container--main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #dfe6e9;
+}
+.container--counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+
+}
+.container--buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+.button{
+    border: none;
+    border-radius:5px;
+    width: 75px;
+    margin: 10px;
+    height: 75px;
+    background-color: #6D214F;
+    color: #F8EFBA;
+    font-weight: bold;
+    font-size: 25px;
+
+
